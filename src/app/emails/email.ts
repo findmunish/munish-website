@@ -1,3 +1,5 @@
+import "./../../../assets/smtp.js";
+declare let Email: any;
 const sendEmail = (
   jsonData,
   { host, fromEmail, toEmail, username = "", password, subject, messageBody }
@@ -15,7 +17,7 @@ const sendEmail = (
     };
     console.log("[inside send mail]\n", JSON.stringify(obj));
   } else {
-    /*Email.send({
+    Email.send({
       Host: host,
       Username: username === "" ? fromEmail : username,
       Password: password,
@@ -29,7 +31,7 @@ const sendEmail = (
       })
       .catch(error => {
         console.log(`Some error, ${error}, occurred in sending email!`);
-      });*/
+      });
   }
 };
 const sendEmailWithAttachment = (
@@ -59,7 +61,7 @@ const sendEmailWithAttachment = (
     };
     console.log("[inside send mail with attachments]\n", JSON.stringify(obj));
   } else {
-    /*Email.send({
+    Email.send({
       Host: host,
       Username: username === "" ? fromEmail : username,
       Password: password,
@@ -74,8 +76,7 @@ const sendEmailWithAttachment = (
       })
       .catch(error => {
         console.log(`Some error, ${error}, occurred in sending email!`);
-      });*/
+      });
   }
 };
-
 export { sendEmail, sendEmailWithAttachment };
