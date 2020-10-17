@@ -18,7 +18,7 @@ export const CONTACT_US_OBJECT: fieldsInterface[] = [
     "",
     "text",
     "Your email....",
-    "E-Mail is required....",
+    "E-Mail id entered is invalid....",
     "email"
   ),
   getFieldObject(
@@ -28,7 +28,7 @@ export const CONTACT_US_OBJECT: fieldsInterface[] = [
     "",
     "text",
     "Your phone....",
-    "Phone is required....",
+    "Phone number entered is invalid....",
     "phone"
   ),
   getFieldObject(
@@ -38,7 +38,7 @@ export const CONTACT_US_OBJECT: fieldsInterface[] = [
     "",
     "textarea",
     "Your message....",
-    "No message is entered....",
+    "No message is typed....",
     "message"
   )
 ];
