@@ -23,6 +23,6 @@
 		<button type="submit" [disabled]="requestQuoteForm.invalid" class="btn btn-success spacing">Submit</button>
 	</form>
 </div>-->
-<app-forms [fields]="setFieldsObject()"></app-forms>
+<app-forms [fields]="getFieldsObject()" (formsData)=setFormData($event)></app-forms>
 
 <app-footer> </app-footer>

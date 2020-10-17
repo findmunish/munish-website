@@ -11,7 +11,7 @@ import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
 })
 export class ContactUsComponent implements OnInit {
   fields: any = CONTACT_US_OBJECT;
-  setFieldsObject() {
+  getFieldsObject() {
     return this.fields;
   }
   // contactUsForm: FormGroup;
@@ -51,4 +51,7 @@ export class ContactUsComponent implements OnInit {
     // sendEmailToCustomer(this.jsonData, requestFormData);
     // sendEmailToTeam(this.jsonData, requestFormData);
   }*/
+  setFormData(contactUsFormData) {
+    console.log(contactUsFormData);
+  }
 }

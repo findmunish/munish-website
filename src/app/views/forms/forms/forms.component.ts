@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { DatePipe } from "@angular/common";
-import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
 
 @Component({
   selector: "app-forms",
@@ -10,7 +9,8 @@ import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
 })
 export class FormsComponent implements OnInit {
   @Input() fields;
-  contactUsForm: FormGroup;
+  @Output() formsData = new EventEmitter();
+  inputDataForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private dataPipe: DatePipe) {}
   createFormGroup(): FormGroup {
     let fieldNamesObj: any = {};
@@ -24,21 +24,22 @@ export class FormsComponent implements OnInit {
     return this.formBuilder.group(fieldNamesObj);
   }
   getGroupControl(index) {
-    return this.contactUsForm.get(this.fields[index].name);
+    return this.inputDataForm.get(this.fields[index].name);
   }
   ngOnInit() {
-    this.contactUsForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
+    this.inputDataForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
   }
   onSubmitForm() {
-    let contactUsData = Object.assign({}, this.contactUsForm.value);
-    this.contactUsForm.reset();
-    console.log("contactUsFormData: ", JSON.stringify(contactUsData));
-    contactUsData.timeStamp = this.dataPipe.transform(
+    let inputData = Object.assign({}, this.inputDataForm.value);
+    this.inputDataForm.reset();
+    console.log("contactUsFormData: ", JSON.stringify(inputData));
+    inputData.timeStamp = this.dataPipe.transform(
       new Date(),
       "dd/MM/yyyy HH:mm:ss"
     );
-    contactUsData.id = Math.random()
+    inputData.id = Math.random()
       .toString(36)
       .substr(2, 7); // uuid.v4();
+    this.formsData.emit(inputData);
   }
 }

@@ -1,6 +1,6 @@
 <div class="card-body">
 	<h3 class="card-title">Request a quote!</h3>
-	<form [formGroup]="contactUsForm" (ngSubmit)="contactUsForm.valid && onSubmitForm()">
+	<form [formGroup]="inputDataForm" (ngSubmit)="inputDataForm.valid && onSubmitForm()">
 		<div *ngFor="let field of fields; let i=index">
 			<div class="form-group">
 				<div *ngIf="field.dataType!=='checkbox' && field.dataType!=='textarea'">
@@ -27,6 +27,6 @@
 				</div>
 			</div>
 		</div>
-		<button type="submit" [disabled]="contactUsForm.invalid" class="btn btn-success spacing">Submit</button>
+		<button type="submit" [disabled]="inputDataForm.invalid" class="btn btn-success spacing">Submit</button>
 	</form>
 </div>
