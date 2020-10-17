@@ -21,7 +21,7 @@ function getValidationObject(valType: string) {
     return Validators.required;
   }
 }
-function getFieldObject(
+export function getFieldObject(
   caption: string,
   id: string,
   name: string,
@@ -42,7 +42,7 @@ function getFieldObject(
     validation: getValidationObject(valType)
   };
 }
-export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
+/*export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
   getFieldObject(
     "First Name",
     "first-name",
@@ -150,4 +150,4 @@ export const CONTACT_US_OBJECT: fieldsInterface[] = [
     "No message is entered....",
     "message"
   )
-];
+];*/
