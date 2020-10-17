@@ -157,7 +157,7 @@ const sendEmailToCustomer = (jsonData, formData, formType) => {
   if (formType === CONTACT_US_FORM) {
     salutation = `Hello ${formData.name},`;
   } else {
-    salutation = `Hello ${getName(formData.first_name, formData.last_name)},`;
+    salutation = `Hello ${getName(formData.firstName, formData.lastName)},`;
   }
 
   let signOff = `Thanks and regards`;
@@ -239,7 +239,7 @@ const sendEmailToTeam = (jsonData, formData, formType) => {
     //if (formType === REQUEST_QUOTE_FORM)
     subject = `[${jsonData.website.title} #${
       formData.trackingId
-    }] Customer ${formData.first_name.toUpperCase()} requests a quote`;
+    }] Customer ${formData.firstName.toUpperCase()} requests a quote`;
     messageBody += convertFormData2HtmlTable(formData);
   }
   messageBody += addLineBreak("br");
