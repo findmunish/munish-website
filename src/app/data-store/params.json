@@ -1,6 +1,6 @@
 {
     "mailParams": {
-        "isSendEmail": "true",
+        "isSendEmail": "false",
         "sendAttachments": "false",
         "gmailMail": "sender@gmail.com",
         "gmailAppPassword": "password",
