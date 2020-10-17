@@ -1,0 +1,7 @@
+p {
+  font-family: Lato;
+}
+
+.container-fluid{
+  min-height: calc(100vh - 56px);
+}
