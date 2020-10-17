@@ -8,7 +8,7 @@
 					<input type={{field.dataType}} id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}>
 					<div class="alert alert-danger"
 						*ngIf="this.getGroupControl(i).touched && this.getGroupControl(i).errors">
-						{{field.caption}} is required!
+						{{field.errorMsg}}
 					</div>
 				</div>
 			</div>
@@ -16,7 +16,7 @@
 				<input type="checkbox" formControlName={{field.name}} id={{field.id}} class="form-check-input"/>
 				<label for={{field.id}} class="form-check-label"> {{field.caption}}</label>
 				<div *ngIf="(getGroupControl(i).touched && getGroupControl(i).errors)" class="alert alert-danger">
-					Please confirm the check-box
+					{{field.errorMsg}}
 				</div>
 			</div>
       <div *ngIf="field.dataType==='textarea'" class="form-group">

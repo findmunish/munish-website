@@ -32,12 +32,12 @@ export class FormsComponent implements OnInit {
   onSubmitForm() {
     let inputData = Object.assign({}, this.inputDataForm.value);
     this.inputDataForm.reset();
-    console.log("contactUsFormData: ", JSON.stringify(inputData));
+    console.log("inputData: ", JSON.stringify(inputData));
     inputData.timeStamp = this.dataPipe.transform(
       new Date(),
       "dd/MM/yyyy HH:mm:ss"
     );
-    inputData.id = Math.random()
+    inputData.trackingId = Math.random()
       .toString(36)
       .substr(2, 7); // uuid.v4();
     this.formsData.emit(inputData);

@@ -1,8 +1,10 @@
 {
     "mailParams": {
-        "isSendEmail": "true",
+        "isSendEmail": "false",
         "sendAttachments": "false",
-        "customerEmail": "test1@gmail.com, test2@gmail.com, test3@gmail.com"
+        "gmailMail": "sender@gmail.com",
+        "customerEmail": "test1@gmail.com, test2@gmail.com, test3@gmail.com",
+        "gmailSmtpServer": "smtp.gmail.com"
     },
     "website": {
         "title": "Fantastic Windows",
