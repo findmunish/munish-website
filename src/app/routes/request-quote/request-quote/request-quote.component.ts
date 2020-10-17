@@ -6,7 +6,7 @@ import {
   sendEmailToTeam
 } from "../../../emails/prepareEmail";
 // import * as uuid from 'uuid';
-import data from "../../../data-store/params.json";
+import data from "../../../../../assets/json/params.json";
 
 @Component({
   selector: "app-request-quote",

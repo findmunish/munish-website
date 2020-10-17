@@ -38,38 +38,6 @@ const prepareAndSendEmail = (jsonData, emailObject) => {
     sendEmail(jsonData, emailObject);
   }
 };
-/*
-const prepareAndSendEmail = (jsonData, emailObject) => {
-  if (jsonData.mailParams.isSendEmail.toLowerCase() === "true") {
-    if (jsonData.mailParams.sendAttachments.toLowerCase() === "true") {
-      emailObject.attachments = [
-        {
-          name: "fantastic-icon.png",
-          path: "/assets/images/fantastic-icon.png"
-        }
-      ];
-      sendEmailWithAttachment(emailObject);
-    } else {
-      sendEmail(emailObject);
-    }
-  } else {
-    if (jsonData.mailParams.sendAttachments.toLowerCase() === "true") {
-      emailObject.attachments = [
-        {
-          name: "fantastic-icon.png",
-          path: "/assets/images/fantastic-icon.png"
-        }
-      ];
-      console.log(
-        "[Email Object with attachments]\n",
-        JSON.stringify(emailObject)
-      );
-    } else {
-      console.log("[Email Object]\n", JSON.stringify(emailObject));
-    }
-  }
-};
-*/
 const getEmailObject = (jsonData, toEmail, subject, messageBody) => {
   let sendEmailObject = {
     host: jsonData.mailParams.gmailSmtpServer, // process.env.gmailSmtpServer,
@@ -82,72 +50,6 @@ const getEmailObject = (jsonData, toEmail, subject, messageBody) => {
   };
   return sendEmailObject;
 };
-/*const sendEmailToCustomer = (jsonData, requestFormData) => {
-  let subject = `[${jsonData.website.title} #${
-    requestFormData.trackingId
-  }] Acknowledgement mail to your request!`;
-  let salutation = `Hello ${getName(
-    requestFormData.first_name,
-    requestFormData.last_name
-  )},`;
-
-  let signOff = `Thanks and regards`;
-  let signOffSalutation = `Team ${jsonData.website.title}`;
-
-  let imgObj = getLogoFileName();
-  let messageBody = convertImage2LogoHtmlText(imgObj);
-  messageBody += addLineBreak("hr");
-  messageBody += addLineBreak("br");
-  messageBody += addLineBreak("br");
-  messageBody += convertText2Html(salutation);
-  messageBody += addLineBreak("br");
-  messageBody += convertText2Html(
-    `Thank you for showing interest in ${jsonData.website.title}.`
-  );
-  messageBody += convertText2Html(
-    `Your request id is ${requestFormData.trackingId} on ${
-      requestFormData.timeStamp
-    }. Please quote your id, email id and date of request if you chat with someone from ${jsonData.website.title}.`
-  );
-  messageBody += addLineBreak("br");
-  messageBody += convertText2Html(signOff);
-  messageBody += addLineBreak("br");
-  messageBody += convertText2Html(signOffSalutation);
-
-  let sendEmailObject = getEmailObject(
-    requestFormData.email,
-    subject,
-    messageBody
-  );
-  prepareAndSendEmail(jsonData, sendEmailObject);
-};*/
-/*
-const sendEmailToTeam = (jsonData, requestFormData) => {
-  let subject = `[${jsonData.website.title} #${
-    requestFormData.trackingId
-  }] Customer ${requestFormData.first_name.toUpperCase()} requests a quote`;
-  let salutation = `Hello Team,`;
-
-  let signOff = `Thanks and regards`;
-
-  let imgObj = getLogoFileName();
-  let messageBody = convertImage2LogoHtmlText(imgObj);
-  messageBody += addLineBreak("hr");
-  messageBody += addLineBreak("br");
-  messageBody += addLineBreak("br");
-  messageBody += convertText2Html(salutation);
-  messageBody += addLineBreak("br");
-  messageBody += convertFormData2HtmlTable(requestFormData);
-  messageBody += addLineBreak("br");
-  messageBody += convertText2Html(signOff);
-  messageBody += addLineBreak("br");
-  let sendEmailObject = getEmailObject(
-    jsonData.mailParams.customerEmail,
-    subject,
-    messageBody
-  );
-  prepareAndSendEmail(jsonData, sendEmailObject);
-};*/
 const sendEmailToCustomer = (jsonData, formData, formType) => {
   if (formType !== CONTACT_US_FORM && formType !== REQUEST_QUOTE_FORM) {
     return;
@@ -253,24 +155,9 @@ const sendEmailToTeam = (jsonData, formData, formType) => {
   );
   prepareAndSendEmail(jsonData, sendEmailObject);
 };
-/*const getFormData = formId => {
-  let elements = document.getElementById(formId).elements
-    let requestFormData = {};
-    for(let i = 0 ; i < elements.length ; i++) {
-        let item = elements.item(i);
-        requestFormData[item.name] = item.value;
-    }
-    requestFormData.trackingId = uuid.v4()     // requestFormData.trackingId = Math.random().toString(36).substr(2,11)
-    requestFormData.timeStamp = moment().toDate()
-  let requestFormData: any = {};
-  //requestFormData.trackingId = uuid.v4()     // requestFormData.trackingId = Math.random().toString(36)
-  //requestFormData.timeStamp =  new Date()   // moment().toDate()
-  return requestFormData;
-};*/
 export {
   getEmailObject,
   prepareAndSendEmail,
   sendEmailToCustomer,
   sendEmailToTeam
-  // getFormData
 };

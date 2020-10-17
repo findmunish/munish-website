@@ -6,7 +6,7 @@ import {
   sendEmailToCustomer,
   sendEmailToTeam
 } from "../../../emails/prepareEmail";
-import data from "../../../data-store/params.json";
+import data from "../../../../../assets/json/params.json";
 
 @Component({
   selector: "app-contact-us",
