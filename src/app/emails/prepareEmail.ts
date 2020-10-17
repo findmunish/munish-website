@@ -188,9 +188,9 @@ const sendEmailToCustomer = (jsonData, formData, formType) => {
       formData.trackingId
     }] Acknowledgement mail to your request!`;
     messageBody += convertText2Html(
-      `Your request id is ${formData.trackingId} on ${
+      `Your request id, ${formData.trackingId}, is submitted on ${
         formData.timeStamp
-      }. Please quote your id, email id and date of request if you chat with someone from ${
+      }. Please quote your request id, email id and date of request if you chat with someone from ${
         jsonData.website.title
       }.`
     );
