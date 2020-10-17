@@ -38,7 +38,7 @@ export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
     "Jammu",
     "text",
     "",
-    "State is required....",
+    "City is required....",
     "city"
   ),
   getFieldObject(
