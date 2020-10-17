@@ -1,4 +1,4 @@
-import "./../../../assets/smtp.js";
+//import "./../../../assets/smtp.js";
 declare let Email: any;
 const sendEmail = (
   jsonData,
