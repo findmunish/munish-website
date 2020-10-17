@@ -17,8 +17,11 @@ import data from "../../../data-store/params.json";
 })
 export class RequestQuoteComponent implements OnInit {
   fields: any = REQUEST_QUOTE_OBJECT;
-  requestQuoteForm: FormGroup;
-  createFormGroup(): FormGroup {
+  setFieldsObject() {
+    return this.fields;
+  }
+  // requestQuoteForm: FormGroup;
+  /*createFormGroup(): FormGroup {
     let fieldNamesObj: any = {};
     for (let i = 0; i < this.fields.length; i++) {
       let key = this.fields[i].name;
@@ -28,20 +31,20 @@ export class RequestQuoteComponent implements OnInit {
       fieldNamesObj[key] = value;
     }
     return this.formBuilder.group(fieldNamesObj);
-  }
-  jsonData: any = data;
+  }*/
+  // jsonData: any = data;
   constructor(
-    private formBuilder: FormBuilder,
-    private datePipe: DatePipe,
+    // private formBuilder: FormBuilder,
+    // private datePipe: DatePipe,
     private router: Router
   ) {}
-  getGroupControl(index) {
+  /*getGroupControl(index) {
     return this.requestQuoteForm.get(this.fields[index].name);
-  }
+  }*/
   ngOnInit() {
-    this.requestQuoteForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
+    // this.requestQuoteForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
   }
-  onSubmitRequestQuote() {
+  /*onSubmitRequestQuote() {
     let requestFormData = Object.assign({}, this.requestQuoteForm.value);
     this.requestQuoteForm.reset();
     console.log("requestFormData: ", JSON.stringify(requestFormData));
@@ -54,5 +57,5 @@ export class RequestQuoteComponent implements OnInit {
       .substr(2, 7); // uuid.v4();
     // sendEmailToCustomer(this.jsonData, requestFormData);
     // sendEmailToTeam(this.jsonData, requestFormData);
-  }
+  }*/
 }

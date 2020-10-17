@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { DatePipe } from "@angular/common";
+// import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+// import { DatePipe } from "@angular/common";
 import { Router } from "@angular/router";
 import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
 
@@ -11,13 +11,16 @@ import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
 })
 export class ContactUsComponent implements OnInit {
   fields: any = CONTACT_US_OBJECT;
-  contactUsForm: FormGroup;
+  setFieldsObject() {
+    return this.fields;
+  }
+  // contactUsForm: FormGroup;
   constructor(
     private router: Router,
-    private formBuilder: FormBuilder,
-    private dataPipe: DatePipe
+    // private formBuilder: FormBuilder,
+    // private dataPipe: DatePipe
   ) {}
-  createFormGroup(): FormGroup {
+  /*createFormGroup(): FormGroup {
     let fieldNamesObj: any = {};
     for (let i = 0; i < this.fields.length; i++) {
       let key = this.fields[i].name;
@@ -30,11 +33,11 @@ export class ContactUsComponent implements OnInit {
   }
   getGroupControl(index) {
     return this.contactUsForm.get(this.fields[index].name);
-  }
+  }*/
   ngOnInit() {
-    this.contactUsForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
+    // this.contactUsForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
   }
-  onSubmitContactUsForm() {
+  /*onSubmitContactUsForm() {
     let contactUsData = Object.assign({}, this.contactUsForm.value);
     this.contactUsForm.reset();
     console.log("contactUsFormData: ", JSON.stringify(contactUsData));
@@ -47,5 +50,5 @@ export class ContactUsComponent implements OnInit {
       .substr(2, 7); // uuid.v4();
     // sendEmailToCustomer(this.jsonData, requestFormData);
     // sendEmailToTeam(this.jsonData, requestFormData);
-  }
+  }*/
 }

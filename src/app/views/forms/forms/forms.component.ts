@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { DatePipe } from "@angular/common";
 import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
@@ -9,7 +9,7 @@ import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
   styleUrls: ["./forms.component.css"]
 })
 export class FormsComponent implements OnInit {
-  fields: any = CONTACT_US_OBJECT;
+  @Input() fields;
   contactUsForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private dataPipe: DatePipe) {}
   createFormGroup(): FormGroup {
