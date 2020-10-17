@@ -1,28 +1,3 @@
-<!--<div class="card-body">
-	<h3 class="card-title">Contact us!</h3>
-	<form [formGroup]="contactUsForm" (ngSubmit)="contactUsForm.valid && onSubmitContactUsForm()">
-		<div *ngFor="let field of fields; let i=index">
-			<div class="form-group">
-				<div *ngIf="field.dataType!=='textarea'">
-					<label *ngIf="field.caption" for={{field.id}}>{{field.caption}}:</label>
-					<input type={{field.dataType}} id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}>
-					<div class="alert alert-danger"
-						*ngIf="this.getGroupControl(i).touched && this.getGroupControl(i).errors">
-						{{field.errorMsg}}
-					</div>
-				</div>
-			</div>
-			<div *ngIf="field.dataType==='textarea'" class="form-group">
-				<label for={{field.id}}> {{field.caption}}</label>
-				<textarea  id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}></textarea>
-				<div *ngIf="(getGroupControl(i).touched && getGroupControl(i).errors)" class="alert alert-danger">
-					{{field.errorMsg}}
-				</div>
-			</div>
-		</div>
-		<button type="submit" [disabled]="contactUsForm.invalid" class="btn btn-success spacing">Submit</button>
-	</form>
-</div>-->
 <app-forms [fields]="getFieldsObject()" (formsData)=setFormData($event)></app-forms>
 
 <app-footer> </app-footer>
