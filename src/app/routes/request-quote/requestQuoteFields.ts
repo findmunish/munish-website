@@ -18,7 +18,7 @@ export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
     "",
     "text",
     "",
-    "Last Name is required",
+    "Last Name is required....",
     "lastName"
   ),
   getFieldObject(
@@ -28,10 +28,19 @@ export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
     "INDIA",
     "text",
     "",
-    "Country is required",
+    "Country is required....",
     "country"
   ),
-  getFieldObject("City", "city", "city", "Jammu", "text", "", "", "city"),
+  getFieldObject(
+    "City",
+    "city",
+    "city",
+    "Jammu",
+    "text",
+    "",
+    "State is required....",
+    "city"
+  ),
   getFieldObject(
     "State",
     "state",
@@ -39,10 +48,9 @@ export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
     "Jammu & Kashmir",
     "text",
     "",
-    "State is required",
+    "State is required....",
     "state"
   ),
-  getFieldObject("State", "state", "state", "", "text", "", "", "state"),
   getFieldObject(
     "Address",
     "address",
@@ -50,11 +58,29 @@ export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
     "",
     "text",
     "",
-    "Address is required",
+    "Address is required....",
     "address"
   ),
-  getFieldObject("E-mail", "email", "email", "", "text", "", "E-Mail id entered is invalid....", "email"),
-  getFieldObject("Phone", "phone", "phone", "", "text", "", "Phone number entered is invalid....", "phone"),
+  getFieldObject(
+    "E-mail",
+    "email",
+    "email",
+    "",
+    "text",
+    "",
+    "E-Mail id entered is invalid....",
+    "email"
+  ),
+  getFieldObject(
+    "Phone",
+    "phone",
+    "phone",
+    "",
+    "text",
+    "",
+    "Phone number entered is invalid....",
+    "phone"
+  ),
   getFieldObject(
     "I AGREE THAT MY SUBMITTED DATA IS BEING COLLECTED AND STORED.",
     "consent",
