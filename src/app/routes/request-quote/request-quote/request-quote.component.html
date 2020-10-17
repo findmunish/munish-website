@@ -1,28 +1,3 @@
-<!--<div class="card-body">
-	<h3 class="card-title">Request a quote!</h3>
-	<form [formGroup]="requestQuoteForm" (ngSubmit)="requestQuoteForm.valid && onSubmitRequestQuote()">
-		<div *ngFor="let field of fields; let i=index">
-			<div class="form-group">
-				<div *ngIf="field.dataType!=='checkbox'">
-					<label *ngIf="field.caption" for={{field.id}}>{{field.caption}}:</label>
-					<input type={{field.dataType}} id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}>
-					<div class="alert alert-danger"
-						*ngIf="this.getGroupControl(i).touched && this.getGroupControl(i).errors">
-						{{field.caption}} is required!
-					</div>
-				</div>
-			</div>
-			<div *ngIf="field.dataType==='checkbox'" class="form-group form-check">
-				<input type="checkbox" formControlName={{field.name}} id={{field.id}} class="form-check-input"/>
-				<label for={{field.id}} class="form-check-label"> {{field.caption}}</label>
-				<div *ngIf="(getGroupControl(i).touched && getGroupControl(i).errors)" class="alert alert-danger">
-					Please confirm the check-box
-				</div>
-			</div>
-		</div>
-		<button type="submit" [disabled]="requestQuoteForm.invalid" class="btn btn-success spacing">Submit</button>
-	</form>
-</div>-->
 <app-forms [fields]="getFieldsObject()" (formsData)=setFormData($event)></app-forms>
 
 <app-footer> </app-footer>
