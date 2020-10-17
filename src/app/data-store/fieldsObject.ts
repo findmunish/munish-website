@@ -1,5 +1,5 @@
 import { Validators } from "@angular/forms";
-import { requestQuoteInterface } from "./requestQuoteInterface";
+import { fieldsInterface } from "./fieldsInterface";
 
 function getValidationObject(valType: string) {
   if (valType.trim().toLowerCase() === "email") {
@@ -42,7 +42,7 @@ function getFieldObject(
     validation: getValidationObject(valType)
   };
 }
-export const REQUEST_QUOTE_OBJECT: requestQuoteInterface[] = [
+export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
   getFieldObject(
     "First Name",
     "first-name",
@@ -109,7 +109,7 @@ export const REQUEST_QUOTE_OBJECT: requestQuoteInterface[] = [
   )
 ];
 
-export const CONTACT_US_OBJECT: requestQuoteInterface[] = [
+export const CONTACT_US_OBJECT: fieldsInterface[] = [
   getFieldObject(
     "",
     "name",

@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { DatePipe } from "@angular/common";
 import { Router } from "@angular/router";
-import { CONTACT_US_OBJECT } from "../../../data-store/requestQuote";
+import { CONTACT_US_OBJECT } from "../../../data-store/fieldsObject";
 
 @Component({
   selector: "app-contact-us",

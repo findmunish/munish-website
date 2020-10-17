@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { DatePipe } from "@angular/common";
-import { REQUEST_QUOTE_OBJECT } from "../../../data-store/requestQuote";
+import { REQUEST_QUOTE_OBJECT } from "../../../data-store/fieldsObject";
 import {
   sendEmailToCustomer,
   sendEmailToTeam

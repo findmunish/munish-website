@@ -1,4 +1,4 @@
-export interface requestQuoteInterface {
+export interface fieldsInterface {
   caption: string;
   id: string;
   name: string;
