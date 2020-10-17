@@ -37,7 +37,7 @@ export class FormsComponent implements OnInit {
       new Date(),
       "dd/MM/yyyy HH:mm:ss"
     );
-    inputData.id = Math.random()
+    inputData.trackingId = Math.random()
       .toString(36)
       .substr(2, 7); // uuid.v4();
     this.formsData.emit(inputData);

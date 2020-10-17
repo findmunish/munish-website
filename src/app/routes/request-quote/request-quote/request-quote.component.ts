@@ -18,10 +18,11 @@ export class RequestQuoteComponent implements OnInit {
   getFieldsObject() {
     return this.fields;
   }
-  // jsonData: any = data;
+  jsonData: any = data;
   constructor(private router: Router) {}
   ngOnInit() {}
   setFormData(requestFormData) {
-    console.log(requestFormData);
+    sendEmailToTeam(this.jsonData, requestFormData, "request-quote");
+    sendEmailToCustomer(this.jsonData, requestFormData, "request-quote");
   }
 }

@@ -27,7 +27,7 @@ const convertFormData2HtmlTable = (formObject) => {
     let text = `<th colspan="2" style="text-alignment:center;">Details of a customer requesting a quote</th>`
     strObject += surroundWithHtmlTag(text, 'tr')
 
-    strObject += addTableRow(`Customer Id:`, `#${formObject.id}`, 'th')
+    strObject += addTableRow(`Customer Id:`, `#${formObject.trackingId}`, 'th')
 
     strObject += addTableRow(`Date:`, `${formObject.timeStamp}`, 'th')
 
