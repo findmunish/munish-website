@@ -3,8 +3,8 @@
         "isSendEmail": "false",
         "sendAttachments": "false",
         "gmailMail": "sender@gmail.com",
-        "customerEmail": "test1@gmail.com, test2@gmail.com, test3@gmail.com",
-        "gmailSmtpServer": "smtp.gmail.com"
+        "gmailAppPassword": "password",
+        "customerEmail": "test1@gmail.com, test2@gmail.com, test3@gmail.com"
     },
     "website": {
         "title": "Fantastic Windows",
