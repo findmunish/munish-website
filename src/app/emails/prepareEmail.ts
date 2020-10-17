@@ -28,6 +28,18 @@ const getLogoFileName = () => {
   return imageObj;
 };
 const prepareAndSendEmail = (jsonData, emailObject) => {
+  //if (process.env.sendAttachments.toLowerCase() === 'true') {
+  if (jsonData.mailParams.sendAttachments.toLowerCase() === "true") {
+    emailObject.attachments = [
+      { name: "fantastic-icon.png", path: "/assets/images/fantastic-icon.png" }
+    ];
+    sendEmailWithAttachment(jsonData, emailObject);
+  } else {
+    sendEmail(jsonData, emailObject);
+  }
+};
+/*
+const prepareAndSendEmail = (jsonData, emailObject) => {
   if (jsonData.mailParams.isSendEmail.toLowerCase() === "true") {
     if (jsonData.mailParams.sendAttachments.toLowerCase() === "true") {
       emailObject.attachments = [
@@ -57,13 +69,14 @@ const prepareAndSendEmail = (jsonData, emailObject) => {
     }
   }
 };
-const getEmailObject = (toEmail, subject, messageBody) => {
+*/
+const getEmailObject = (jsonData, toEmail, subject, messageBody) => {
   let sendEmailObject = {
-    host: "", // process.env.gmailSmtpServer,
-    fromEmail: "", // process.env.gmailMail,
+    host: jsonData.mailParams.gmailSmtpServer, // process.env.gmailSmtpServer,
+    fromEmail: jsonData.mailParams.gmailMail, // process.env.gmailMail,
     toEmail: toEmail,
     username: "",
-    password: "", // process.env.gmailAppPassword,
+    password: jsonData.mailParams.gmailAppPassword, // process.env.gmailAppPassword,
     subject: subject,
     messageBody: messageBody
   };
@@ -144,10 +157,7 @@ const sendEmailToCustomer = (jsonData, formData, formType) => {
   if (formType === CONTACT_US_FORM) {
     salutation = `Hello ${formData.name},`;
   } else {
-    salutation = `Hello ${getName(
-      formData.first_name,
-      formData.last_name
-    )},`;
+    salutation = `Hello ${getName(formData.first_name, formData.last_name)},`;
   }
 
   let signOff = `Thanks and regards`;
@@ -180,7 +190,9 @@ const sendEmailToCustomer = (jsonData, formData, formType) => {
     messageBody += convertText2Html(
       `Your request id is ${formData.trackingId} on ${
         formData.timeStamp
-      }. Please quote your id, email id and date of request if you chat with someone from ${jsonData.website.title}.`
+      }. Please quote your id, email id and date of request if you chat with someone from ${
+        jsonData.website.title
+      }.`
     );
   }
   messageBody += addLineBreak("br");
@@ -189,6 +201,7 @@ const sendEmailToCustomer = (jsonData, formData, formType) => {
   messageBody += convertText2Html(signOffSalutation);
 
   let sendEmailObject = getEmailObject(
+    jsonData,
     formData.email,
     subject,
     messageBody
@@ -233,6 +246,7 @@ const sendEmailToTeam = (jsonData, formData, formType) => {
   messageBody += convertText2Html(signOff);
   messageBody += addLineBreak("br");
   let sendEmailObject = getEmailObject(
+    jsonData,
     jsonData.mailParams.customerEmail, // process.env.customerEmail,
     subject,
     messageBody
