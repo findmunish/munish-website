@@ -1,7 +1,18 @@
 <app-header> </app-header>
 
 <div class="jumbotron">
-  request cost calculation
+  <form [formGroup]='inputForm'>
+    <div>
+      Width :
+      <input type="text" rentRangeSlider rangeType='width' formControlName='width' name='width'>
+      <br/>
+    </div>
+    <div>
+      Height :
+      <input type="text" rentRangeSlider rangeType='height' formControlName='height' name='height'>
+      <br/>
+    </div>
+  </form>
 </div>
 
 <app-footer> </app-footer>
