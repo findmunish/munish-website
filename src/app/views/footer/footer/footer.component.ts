@@ -9,7 +9,7 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
-  mobileNum = '00917889368892';
+  mobileNum = 'my mobile n';
   ngOnInit() {
   }
   isMobile() {
