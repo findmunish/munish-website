@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CAROUSEL_DATA } from "../carouselData"
 
 @Component({
   selector: 'app-carousel',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-
+  carouselItems: any = CAROUSEL_DATA;
   constructor() { }
 
   ngOnInit() {
