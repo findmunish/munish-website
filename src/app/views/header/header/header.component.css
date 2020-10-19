@@ -1,3 +1,15 @@
 spacing {
   margin-right: 25px;
 }
+.contact-heading{
+	font-size: 40px;
+	color:teal;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.teal {
+  background-color: rgb(0, 150, 136) !important;
+}
+.header-link {
+	cursor: pointer;
+}

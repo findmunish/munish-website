@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
+import { GET_ROUTING_LINK } from "../../../data-store/routesData";
+
 @Component({
   selector: "app-footer",
   templateUrl: "./footer.component.html",
