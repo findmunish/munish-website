@@ -1,32 +1,38 @@
-<div class="card-body">
-	<h3 class="card-title">Request a quote!</h3>
-	<form [formGroup]="inputDataForm" (ngSubmit)="inputDataForm.valid && onSubmitForm()">
-		<div *ngFor="let field of fields; let i=index">
-			<div class="form-group">
-				<div *ngIf="field.dataType!=='checkbox' && field.dataType!=='textarea'">
-					<label *ngIf="field.caption" for={{field.id}}>{{field.caption}}:</label>
-					<input type={{field.dataType}} id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}>
-					<div class="alert alert-danger"
-						*ngIf="this.getGroupControl(i).touched && this.getGroupControl(i).errors">
+<div class="jumbotron">
+	<div class="card-body">
+		<h3 class="card-title">Request a quote!</h3>
+		<form [formGroup]="inputDataForm" (ngSubmit)="inputDataForm.valid && onSubmitForm()">
+			<div class="main">
+			<div *ngFor="let field of fields; let i=index" [ngClass]="getClass(i)">
+				<span>
+				<div class="form-group">
+					<div *ngIf="field.dataType!=='checkbox' && field.dataType!=='textarea'">
+						<label *ngIf="field.caption" for={{field.id}}>{{field.caption}}:</label>
+						<input type={{field.dataType}} id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}>
+						<div class="alert alert-danger"
+							*ngIf="this.getGroupControl(i).touched && this.getGroupControl(i).errors">
+							{{field.errorMsg}}
+						</div>
+					</div>
+				</div>
+				<div *ngIf="field.dataType==='checkbox'" class="form-group form-check">
+					<input type="checkbox" formControlName={{field.name}} id={{field.id}} class="form-check-input"/>
+					<label for={{field.id}} class="form-check-label"> {{field.caption}}</label>
+					<div *ngIf="(getGroupControl(i).touched && getGroupControl(i).errors)" class="alert alert-danger">
 						{{field.errorMsg}}
 					</div>
 				</div>
-			</div>
-			<div *ngIf="field.dataType==='checkbox'" class="form-group form-check">
-				<input type="checkbox" formControlName={{field.name}} id={{field.id}} class="form-check-input"/>
-				<label for={{field.id}} class="form-check-label"> {{field.caption}}</label>
-				<div *ngIf="(getGroupControl(i).touched && getGroupControl(i).errors)" class="alert alert-danger">
-					{{field.errorMsg}}
+		  		<div *ngIf="field.dataType==='textarea'" class="form-group">
+					<label for={{field.id}}> {{field.caption}}</label>
+					<textarea  id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}></textarea>
+					<div *ngIf="(getGroupControl(i).touched && getGroupControl(i).errors)" class="alert alert-danger">
+						{{field.errorMsg}}
+					</div>
 				</div>
+				</span>
 			</div>
-      <div *ngIf="field.dataType==='textarea'" class="form-group">
-				<label for={{field.id}}> {{field.caption}}</label>
-				<textarea  id={{field.id}} class="form-control" formControlName={{field.name}} placeholder={{field.placeholder}}></textarea>
-				<div *ngIf="(getGroupControl(i).touched && getGroupControl(i).errors)" class="alert alert-danger">
-					{{field.errorMsg}}
-				</div>
 			</div>
-		</div>
-		<button type="submit" [disabled]="inputDataForm.invalid" class="btn btn-success spacing">Submit</button>
-	</form>
+			<button type="submit" [disabled]="inputDataForm.invalid" class="btn btn-success spacing">Submit</button>
+		</form>
+	</div>	
 </div>

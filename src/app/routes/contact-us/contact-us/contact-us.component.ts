@@ -1,12 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { CONTACT_US_OBJECT } from "../contactUsFields";
-
-import {
-  sendEmailToCustomer,
-  sendEmailToTeam
-} from "../../../emails/prepareEmail";
-import data from "../../../../../assets/json/params.json";
+import { sendEmailToCustomer, sendEmailToTeam } from "../../../emails/prepareEmail";
+import data from "../../../../assets/json/params.json";
 
 @Component({
   selector: "app-contact-us",

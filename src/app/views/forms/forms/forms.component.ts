@@ -8,10 +8,18 @@ import { DatePipe } from "@angular/common";
   styleUrls: ["./forms.component.css"]
 })
 export class FormsComponent implements OnInit {
-  @Input() fields;
+  constructor(private formBuilder: FormBuilder, private dataPipe: DatePipe) { }
+  ngOnInit() {
+    this.inputDataForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
+  }
+  getClass(index) {
+    if (!this.stackFieldsHorizontally) return ''
+    return ( (index%2 === 0)? 'left' : 'right' );
+  }
+  @Input() fields
+  @Input() stackFieldsHorizontally;
   @Output() formsData = new EventEmitter();
   inputDataForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private dataPipe: DatePipe) {}
   createFormGroup(): FormGroup {
     let fieldNamesObj: any = {};
     for (let i = 0; i < this.fields.length; i++) {
@@ -26,20 +34,11 @@ export class FormsComponent implements OnInit {
   getGroupControl(index) {
     return this.inputDataForm.get(this.fields[index].name);
   }
-  ngOnInit() {
-    this.inputDataForm = this.createFormGroup(); // this.formBuilder.group(this.createFormGroup());
-  }
   onSubmitForm() {
     let inputData = Object.assign({}, this.inputDataForm.value);
     this.inputDataForm.reset();
-    console.log("inputData: ", JSON.stringify(inputData));
-    inputData.timeStamp = this.dataPipe.transform(
-      new Date(),
-      "dd/MM/yyyy HH:mm:ss"
-    );
-    inputData.trackingId = Math.random()
-      .toString(36)
-      .substr(2, 7); // uuid.v4();
+    inputData.timeStamp = this.dataPipe.transform(new Date(), "dd/MM/yyyy HH:mm:ss");
+    inputData.trackingId = Math.random().toString(36).substr(2, 7); // uuid.v4();
     this.formsData.emit(inputData);
   }
 }
