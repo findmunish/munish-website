@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { RequestQuoteComponent } from './request-quote/request-quote.component';
+import { HeaderModule } from "../../views/header/header.module";
 import { FooterModule } from "../../views/footer/footer.module";
 import { FormsModule } from "../../views/forms/forms.module";
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    HeaderModule,
     FooterModule,
     FormsModule,
     RouterModule.forChild(routes)
