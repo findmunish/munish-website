@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
+import { WINDOWS_CARD_DATA } from "../windowsCardData";
+import { GLASSES_CARD_DATA } from "../glassesCardData";
+
 @Component({
   selector: "app-windows",
   templateUrl: "./windows.component.html",
@@ -9,21 +12,12 @@ import { Router } from "@angular/router";
 export class WindowsComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit() {}
-
-  getCardImageObj() {
-    return {
-      imageObj: {
-        imageUrl: "../../../../assets/images/slidingWindow.jpg"
-      },
-      title: {
-        headerText: "Sliding Windows",
-        bodyText: ""
-      },
-      desc: {
-        headerText: "Description",
-        bodyText:
-          "These windows have sashes that slightly overlap each other, while moving on a fixed horizontal frame. These are best suited for residential and commercial spaces where space saving is a must. They offer convenience and space."
-      }
-    };
+  windowsData: any = WINDOWS_CARD_DATA;
+  glassesData: any = GLASSES_CARD_DATA;
+  getWindowImagesObj(index) {
+    return this.windowsData[index];
+  }
+  getGlassImagesObj(index) {
+    return this.glassesData[index];
   }
 }
