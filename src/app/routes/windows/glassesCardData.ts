@@ -2,7 +2,7 @@ import { imageCardInterface } from "./imageCardDataInterface";
 export const GLASSES_CARD_DATA: imageCardInterface[] = [
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/floatGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/floatGlass.jpg"
         },
         title: {
             headerText: "Float Or Annealed Glass",
@@ -20,7 +20,7 @@ export const GLASSES_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/toughenedGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/toughenedGlass.jpg"
         },
         title: {
             headerText: "Toughened Glass",
@@ -38,7 +38,7 @@ export const GLASSES_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/heatGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/heatGlass.jpg"
         },
         title: {
             headerText: "Heat Strengthened Glass",
@@ -56,7 +56,7 @@ export const GLASSES_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/frostedGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/frostedGlass.jpg"
         },
         title: {
             headerText: "Frosted Glass",
@@ -74,7 +74,7 @@ export const GLASSES_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/insulatedGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/insulatedGlass.jpg"
         },
         title: {
             headerText: "Insulated Or Double Glass",
@@ -92,7 +92,7 @@ export const GLASSES_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/laminatedGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/laminatedGlass.jpg"
         },
         title: {
             headerText: "Laminated Glass",
@@ -110,7 +110,7 @@ export const GLASSES_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/tintedGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/tintedGlass.jpg"
         },
         title: {
             headerText: "Tinted (Colored) Glass",
@@ -128,7 +128,7 @@ export const GLASSES_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/borosilicateGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/borosilicateGlass.jpg"
         },
         title: {
             headerText: "Reflective Glass",

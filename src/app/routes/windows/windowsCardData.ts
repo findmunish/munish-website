@@ -2,7 +2,7 @@ import { imageCardInterface } from "./imageCardDataInterface";
 export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/slidingWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/slidingWindow.jpg"
         },
         title: {
             headerText: "Sliding Windows",
@@ -20,7 +20,7 @@ export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/casementWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/casementWindow.jpg"
         },
         title: {
             headerText: "Casement Windows",
@@ -38,7 +38,7 @@ export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/bayWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/bayWindow.jpg"
         },
         title: {
             headerText: "Bay Windows",
@@ -56,7 +56,7 @@ export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/tiltWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/tiltWindow.jpg"
         },
         title: {
             headerText: "Tilt And Turn Windows",
@@ -74,7 +74,7 @@ export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/combinationWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/combinationWindow.jpg"
         },
         title: {
             headerText: "Combination Windows",
@@ -92,7 +92,7 @@ export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/fixedWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/fixedWindow.jpg"
         },
         title: {
             headerText: "Fixed Windows",
@@ -110,7 +110,7 @@ export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/singleWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/singleWindow.jpg"
         },
         title: {
             headerText: "Single And Double Hung Windows",
@@ -128,7 +128,7 @@ export const WINDOWS_CARD_DATA: imageCardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "../../../../assets/images/awningWindow.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/awningWindow.jpg"
         },
         title: {
             headerText: "Awning Windows",

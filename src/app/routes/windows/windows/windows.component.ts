@@ -12,11 +12,12 @@ import { GLASSES_CARD_DATA } from "../glassesCardData";
 export class WindowsComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit() {}
+  windowsData: any = WINDOWS_CARD_DATA;
+  glassesData: any = GLASSES_CARD_DATA;
   getWindowImagesObj(index) {
-    return WINDOWS_CARD_DATA[index];
+    return this.windowsData[index];
   }
   getGlassImagesObj(index) {
-    return GLASSES_CARD_DATA[index];
+    return this.glassesData[index];
   }
 }
-
