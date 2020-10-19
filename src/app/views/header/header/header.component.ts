@@ -11,6 +11,7 @@ import { GET_ROUTING_LINK } from '../../../data-store/routesData';
 export class HeaderComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit() {}
+  
   @Output() openUrlRequest = new EventEmitter
   navToRouteType(strRouteType) {
     this.router.navigateByUrl(GET_ROUTING_LINK(strRouteType));

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  imports: [CommonModule,],
+  imports: [CommonModule],
   exports: [HeaderComponent],
   declarations: [HeaderComponent]
 })
