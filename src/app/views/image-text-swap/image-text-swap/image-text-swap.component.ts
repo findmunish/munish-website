@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class ImageTextSwapComponent implements OnInit {
   @Input() cardImageObj;
+  @Input() isHorizontalTransition;
+  @Input() isVerticalTransition;
 
   constructor() {}
   ngOnInit() {}
