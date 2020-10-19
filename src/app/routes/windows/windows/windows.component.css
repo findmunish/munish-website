@@ -1,14 +1,14 @@
 .banner{
-    background-image: url("/assets/images/banner2.jpg");
+    background-image: url("https://fantastic-windows.netlify.app/assets/images/banner2.jpg");
     min-height: 60vh;
     width: 100%;
     background-size: cover;
 }
 .contact-banner{
-    background-image: url("/assets/images/banner3.jpg");
+    background-image: url("https://fantastic-windows.netlify.app/assets/images/banner3.jpg");
 }
 .parallex {
-    background-image: url(/assets/images/banner1.png);
+    background-image: url(https://fantastic-windows.netlify.app/assets/images/banner1.png);
     background-size: cover;
     background-attachment: fixed;
     height: 400px;

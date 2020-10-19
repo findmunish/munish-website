@@ -1,4 +1,40 @@
 <app-header> </app-header>
-<app-forms [fields]="getFieldsObject()" (formsData)=setFormData($event)></app-forms>
-
+<section class="banner contact-banner">
+    <div class="feature-heading">
+        <h3 class="contact-heading text-center mb-4">Contact Us</h3>
+    </div>
+</section>
+<section class="contact">
+    <div class="container">
+        <h3 class="contact-heading text-center mb-5 mt-5">Get In Touch</h3>
+        <div class="row">
+            <div class="col-lg-6 grid-left grid-left-border">
+                <div class="contact-left">
+                    <h3 class="text-center">Contact Details</h3>
+                    <p class="mb-sm-5 mb-3">
+                        Phasellus iaculis sapien in tellus gravida, lorem placerat in
+                        amet lacus elementum. Nulla vitae lacus nec elit mollis pretium.
+                        Sed sed nunc lectus.
+                    </p>
+                    <ul>
+                        <li>
+                            <label><i class="fa fa-map-marker" aria-hidden="true"></i></label> IGC Phase III, Samba
+                        </li>
+                        <li>
+                            <label><i class="fa fa-envelope" aria-hidden="true"></i></label>
+                            <a href="mailto:info@example.com">my-email@gmail.com</a>,
+                            <a href="mailto:info@example1.com">your-email@gmail.com</a>
+                        </li>
+                        <li>
+                            <label><i class="fa fa-phone" aria-hidden="true"></i></label>+91-941-910-xxxx
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 grid-left">
+                <app-forms [fields]="getFieldsObject()" [stackFieldsHorizontally]="false" (formsData)=setFormData($event)></app-forms>                
+            </div>
+        </div>
+    </div>
+</section>
 <app-footer> </app-footer>
