@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup , FormControl } from '@angular/forms';
+// import { FormGroup , FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,13 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./request-cost-calculation.component.css']
 })
 export class RequestCostCalculationComponent implements OnInit {
-  name = 'Dimension Slider';
-  inputForm:FormGroup;
   constructor(){
-    this.inputForm = new FormGroup({
-        width : new FormControl('3000'),
-        height : new FormControl('5000')
-    });
   }
   ngOnInit() {
   }

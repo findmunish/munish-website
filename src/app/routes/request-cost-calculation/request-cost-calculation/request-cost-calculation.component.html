@@ -1,18 +1,21 @@
 <app-header> </app-header>
 
 <div class="jumbotron">
-  <form [formGroup]='inputForm'>
+  <div class="slidecontainer">
+    <input type="range" min="400" max="1000" value="0" class="slider" id="myRange">
+  </div>
+  <!--<form [formGroup]='inputForm'>
     <div>
       Width :
-      <input type="text" rentRangeSlider rangeType='width' formControlName='width' name='width'>
+      <input type="text" appRange rangeType='width' formControlName='width' name='width'>
       <br/>
     </div>
     <div>
       Height :
-      <input type="text" rentRangeSlider rangeType='height' formControlName='height' name='height'>
+      <input type="text" appRange rangeType='height' formControlName='height' name='height'>
       <br/>
     </div>
-  </form>
+  </form>-->
 </div>
 
 <app-footer> </app-footer>
