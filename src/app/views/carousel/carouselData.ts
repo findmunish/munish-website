@@ -1,16 +1,18 @@
-import { carouselInterface } from "./carouselDataInterface";
-export const CAROUSEL_DATA: carouselInterface[] = [
+import { cardInterface } from "../../data-store/cardComponentInterface";
+export const CAROUSEL_DATA: cardInterface[] = [
     {
         imageObj: {
             imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/Aluminium-Windows-1000x658.jpg"
         },
         title: {
-            text: "Aluminium Windows",
+            headerText: "Aluminium Windows",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         },
         desc: {
-            text: "HOMEALL SERVICES....ALUMINIUM WINDOWS",
+            headerText: "HOMEALL SERVICES....ALUMINIUM WINDOWS",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         }
@@ -20,12 +22,14 @@ export const CAROUSEL_DATA: carouselInterface[] = [
             imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/service-41.jpg"
         },
         title: {
-            text: "UPVC Windows",
+            headerText: "UPVC Windows",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         },
         desc: {
-            text: "HOMEALL SERVICES....UPVC WINDOWS",
+            headerText: "HOMEALL SERVICES....UPVC WINDOWS",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         }
@@ -35,12 +39,14 @@ export const CAROUSEL_DATA: carouselInterface[] = [
             imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/window-services-1000x658.jpg"
         },
         title: {
-            text: "Windows Services",
+            headerText: "Windows Services",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         },
         desc: {
-            text: "HOMEALL SERVICES....WINDOWS SERVICES",
+            headerText: "HOMEALL SERVICES....WINDOWS SERVICES",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         }
@@ -50,12 +56,14 @@ export const CAROUSEL_DATA: carouselInterface[] = [
             imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/door-services-1000x658.jpg"
         },
         title: {
-            text: "Doors Services",
+            headerText: "Doors Services",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         },
         desc: {
-            text: "HOMEALL SERVICES....DOORS SERVICES",
+            headerText: "HOMEALL SERVICES....DOORS SERVICES",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         }
@@ -65,12 +73,14 @@ export const CAROUSEL_DATA: carouselInterface[] = [
             imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/Planning-and-projects-1000x658.jpg"
         },
         title: {
-            text: "Planning & Projects",
+            headerText: "Planning & Projects",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         },
         desc: {
-            text: "HOMEALL SERVICES....PLANNING & PROJECTS",
+            headerText: "HOMEALL SERVICES....PLANNING & PROJECTS",
+            bodyText: "",
             fontColor: "black",
             fontSize: ""
         }
