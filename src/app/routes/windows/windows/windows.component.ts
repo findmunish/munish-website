@@ -33,6 +33,6 @@ export class WindowsComponent implements OnInit {
     fontSize: ""
   };
   getImageLink() {
-    return '../../../../assets/images/banner1.png';
+    return 'https://fantastic-windows.netlify.app/assets/images/banner1.png';
   }
 }
