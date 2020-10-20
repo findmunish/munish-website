@@ -1,5 +1,6 @@
-import { imageCardInterface } from "./imageCardDataInterface";
-export const WINDOWS_CARD_DATA: imageCardInterface[] = [
+import { cardInterface } from "../../data-store/cardComponentInterface";
+
+export const WINDOWS_CARD_DATA: cardInterface[] = [
     {
         imageObj: {
             imageUrl: "https://fantastic-windows.netlify.app/assets/images/slidingWindow.jpg"
