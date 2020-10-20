@@ -1,8 +1,9 @@
-import { imageCardInterface } from "./imageCardDataInterface";
-export const GLASSES_CARD_DATA: imageCardInterface[] = [
+import { cardInterface } from "../../data-store/cardComponentInterface";
+
+export const GLASSES_CARD_DATA: cardInterface[] = [
     {
         imageObj: {
-            imageUrl: "https://fantastic-windows.netlify.app/assets/images/floatGlass.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/floatGlass.jpg",
         },
         title: {
             headerText: "Float Or Annealed Glass",

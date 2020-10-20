@@ -1,6 +1,6 @@
-import { fieldsInterface } from "../../views/forms/fieldsInterface";
+import { formFieldsInterface } from "../../data-store/formFieldsInterface";
 import { getFieldObject } from "../../views/forms/fieldsObject";
-export const CONTACT_US_OBJECT: fieldsInterface[] = [
+export const CONTACT_US_OBJECT: formFieldsInterface[] = [
   getFieldObject(
     "",
     "name",

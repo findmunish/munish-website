@@ -1,4 +1,4 @@
-export interface fieldsInterface {
+export interface formFieldsInterface {
   caption: string;
   id: string;
   name: string;

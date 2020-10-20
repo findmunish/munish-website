@@ -1,6 +1,6 @@
-import { fieldsInterface } from "../../views/forms/fieldsInterface";
+import { formFieldsInterface } from "../../data-store/formFieldsInterface";
 import { getFieldObject } from "../../views/forms/fieldsObject";
-export const REQUEST_QUOTE_OBJECT: fieldsInterface[] = [
+export const REQUEST_QUOTE_OBJECT: formFieldsInterface[] = [
   getFieldObject(
     "First Name",
     "first-name",

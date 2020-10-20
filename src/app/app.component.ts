@@ -1,4 +1,5 @@
 import { Component, VERSION } from "@angular/core";
+// import { AngularFireStorage } from 'angularfire2/storage';
 
 @Component({
   selector: "my-app",
@@ -7,5 +8,5 @@ import { Component, VERSION } from "@angular/core";
 })
 export class AppComponent {
   name = "Angular " + VERSION.major;
-  constructor() {}
+  constructor() { }
 }
