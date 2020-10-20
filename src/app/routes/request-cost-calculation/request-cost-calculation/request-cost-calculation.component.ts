@@ -21,4 +21,6 @@ export class RequestCostCalculationComponent implements OnInit {
     fontSize: ""
   };
   getImageLink() {
+    return 'https://fantastic-windows.netlify.app/assets/images/banner1.png';
+  }
 }

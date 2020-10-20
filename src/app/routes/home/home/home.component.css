@@ -172,7 +172,7 @@
 	color: #fff;
 	margin-top: 2em;
 }
-#menu {
+/*#menu {
   width: 150px;
   height: 150px;
   position: absolute;
@@ -253,4 +253,4 @@
 #menu:target>.menu-item:nth-child(4) {
   transform: rotate(-60deg) translateY(-150px) rotate(60deg);
   transition-delay: 0.3s;
-}
+}*/

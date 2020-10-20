@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { textObjInterface } from "../../../data-store/cardComponentInterface";
+
 @Component({
   selector: 'app-doors',
   templateUrl: './doors.component.html',

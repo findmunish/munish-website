@@ -6,6 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { HeaderModule } from "../../views/header/header.module";
 import { CustomerReviewsModule} from "../../views/customer-reviews/customer-reviews.module";
 import { BannerModule } from "../../views/banner/banner.module";
+import { UpvcModule } from "../../views/upvc/upvc.module"
 import { ParallaxModule } from "../../views/parallax/parallax.module";
 import { CarouselModule } from "../../views/carousel/carousel.module";
 import { FooterModule } from "../../views/footer/footer.module";
@@ -18,6 +19,7 @@ const routes: Routes = [{ path: "", component: HomeComponent }];
     HeaderModule,
     CustomerReviewsModule,
     BannerModule,
+    UpvcModule,
     ParallaxModule,
     CarouselModule,
     FooterModule,
@@ -25,4 +27,5 @@ const routes: Routes = [{ path: "", component: HomeComponent }];
   ],
   declarations: [HomeComponent]
 })
+
 export class HomeModule {}

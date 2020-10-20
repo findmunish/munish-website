@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { CONTACT_US_OBJECT } from "../contactUsFields";
 import { textObjInterface } from "../../../data-store/cardComponentInterface";
 import { sendEmailToCustomer, sendEmailToTeam } from "../../../emails/prepareEmail";
-import data from "../../../../assets/json/params.json";
+import data from "../../../../../assets/json/params.json";
 
 @Component({
   selector: "app-contact-us",
