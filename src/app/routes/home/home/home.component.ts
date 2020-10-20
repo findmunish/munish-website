@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
-// import { ROUTE_LINKS } from '../../../data-store/routesData';
+import { REVIEW_CONTENT } from "../../../views/customer-reviews/review-content";
 
 @Component({
   selector: 'app-home',
@@ -9,8 +9,11 @@ import { Router } from "@angular/router";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  // routeLinks: any = ROUTE_LINKS;
   constructor(private router: Router) { }
-  ngOnInit() { }
-  // urlType = ROUTE_LINKS.HOME;
+  ngOnInit(){
+  }
+
+  getReviewContent(index) {
+    return REVIEW_CONTENT[index];
+  }
 }

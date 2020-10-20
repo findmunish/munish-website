@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { HomeComponent } from "./home/home.component";
 import { HeaderModule } from "../../views/header/header.module";
+import { CustomerReviewsModule} from "../../views/customer-reviews/customer-reviews.module";
 import { CarouselModule } from "../../views/carousel/carousel.module";
 import { FooterModule } from "../../views/footer/footer.module";
 
@@ -13,11 +14,11 @@ const routes: Routes = [{ path: "", component: HomeComponent }];
   imports: [
     CommonModule,
     HeaderModule,
+    CustomerReviewsModule,
     CarouselModule,
     FooterModule,
     RouterModule.forChild(routes)
   ],
   declarations: [HomeComponent]
 })
-
 export class HomeModule {}

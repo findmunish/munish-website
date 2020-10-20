@@ -49,38 +49,41 @@
                           <h2 class="text-center mt-5 mb-5">Client Reviews</h2>
                       <div class="our_solution_category">
                           <div class="solution_cards_box">
-                          <div class="solution_card">
-                              <div class="hover_color_bubble"></div>
-                              <div class="so_top_icon">
-                                  <i class="fas fa-pen-alt fa-2x"></i>
-                              </div>
-                              <div class="solu_title">
+                          <app-customer-reviews [reviewContent]="getReviewContent(0)"> </app-customer-reviews>
+                          <!--<div class="solution_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="so_top_icon">
+                                <i class="fas fa-pen-alt fa-2x"></i>
+                            </div>
+                            <div class="solu_title">
                               <h3>Client Name</h3>
-                              </div>
-                              <div class="solu_description">
+                            </div>
+                            <div class="solu_description">
                               <p>
                                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                               </p>
-                              </div>
-                          </div>
-                          <div class="solution_card">
-                              <div class="hover_color_bubble"></div>
-                              <div class="so_top_icon">
-                                  <i class="fas fa-pen-alt fa-2x"></i>
-                              </div>
-                              <div class="solu_title">
+                            </div>
+                          </div>-->
+                          <app-customer-reviews [reviewContent]="getReviewContent(1)"> </app-customer-reviews>
+                          <!--<div class="solution_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="so_top_icon">
+                                <i class="fas fa-pen-alt fa-2x"></i>
+                            </div>
+                            <div class="solu_title">
                               <h3>Client Name</h3>
-                              </div>
-                              <div class="solu_description">
+                            </div>
+                            <div class="solu_description">
                               <p>
                                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                               </p>
-                              </div>
-                          </div>
+                            </div>
+                          </div>-->
                           </div>
                           <!--  -->
                           <div class="solution_cards_box">
-                          <div class="solution_card">
+                          <app-customer-reviews [reviewContent]="getReviewContent(2)"> </app-customer-reviews>
+                          <!--<div class="solution_card">
                               <div class="hover_color_bubble"></div>
                               <div class="so_top_icon">
                                   <i class="fas fa-pen-alt fa-2x"></i>
@@ -93,8 +96,9 @@
                                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                               </p>
                               </div>
-                          </div>
-                          <div class="solution_card">
+                          </div>-->
+                          <app-customer-reviews [reviewContent]="getReviewContent(3)"> </app-customer-reviews>
+                          <!--<div class="solution_card">
                               <div class="hover_color_bubble"></div>
                               <div class="so_top_icon">
                                   <i class="fas fa-pen-alt fa-2x"></i>
@@ -107,7 +111,7 @@
                                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                               </p>
                               </div>
-                          </div>
+                          </div>-->
                           </div>
                       </div>
                       </div>
