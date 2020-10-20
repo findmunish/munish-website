@@ -2,7 +2,7 @@
 <div class="col-lg-3 col-md-6">
   <div class="main">
     <div [ngClass]="(isHorizontalTransition===true)?'card-my3':'card-my2'">
-      <div class="large">
+      <div [class.large]="isHorizontalTransition===true">
         <div [ngClass]="(isHorizontalTransition===true)?'active-div2':'active-div'">
           <div class="owl">
             <img [ngClass]="(isHorizontalTransition===true)?'img2':'img3'" src={{cardImageObj.imageObj.imageUrl}} alt={{cardImageObj.imageObj.altText}}>
