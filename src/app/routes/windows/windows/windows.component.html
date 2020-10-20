@@ -1,10 +1,11 @@
 <app-header> </app-header>
 
-<section class="banner contact-banner">
-	<div class="feature-heading">
-		<h3 class="contact-heading text-center mb-4">PRODUCTS</h3>
-	</div>
-</section>
+<!-- <section class="banner contact-banner">
+  <div class="feature-heading">
+      <h3 class="contact-heading text-center mb-4">PRODUCTS</h3>
+  </div>
+</section> -->
+<app-banner [bannerObj]="bannerObjTop"> </app-banner>
 <section class="windows-components">
 	<div class="container">
 		<h3 class="contact-heading text-center mb-5 mt-5">COMPONENTS</h3>
@@ -238,7 +239,7 @@
 			</div>
 		</div>
 </section>
-<section class="parallex mb-5 mt-5">
+<!--<section class="parallex mb-5 mt-5">
 	<div class="container">
 		<div class="row">
 			<div class="col text-center mt-5">
@@ -257,7 +258,9 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
+<app-parallax [imageLink]="getImageLink()"></app-parallax>
+<app-banner [bannerObj]="bannerObj"> </app-banner>
 <section class="windows mt-5">
 	<div class="container">
 		<h2 class="contact-heading text-center mb-5">WINDOWS</h2>

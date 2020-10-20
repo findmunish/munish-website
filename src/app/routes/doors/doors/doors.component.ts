@@ -12,5 +12,13 @@ export class DoorsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  bannerObj: textObjInterface = {
+    headerText: "PRODUCT - DOORS",
+    bodyText: "",
+    fontColor: "",
+    fontSize: ""
+  };
+  getImageLink() {
+    return '../../../../assets/images/banner1.png';
+  }
 }

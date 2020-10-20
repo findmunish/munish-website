@@ -5,11 +5,10 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
+
 export class BannerComponent implements OnInit {
   @Input() bannerObj;
   constructor() { }
-
   ngOnInit() {
   }
-
 }

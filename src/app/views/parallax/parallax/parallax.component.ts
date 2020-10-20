@@ -7,9 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ParallaxComponent implements OnInit {
   @Input() imageLink;
+  picture="";
   constructor() { }
 
   ngOnInit() {
+    this.picture = `url(${this.imageLink})`;
   }
-
 }

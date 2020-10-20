@@ -1,4 +1,8 @@
 <app-header> </app-header>
+
+<app-banner [bannerObj]="bannerObj"> </app-banner>
+<app-parallax [imageLink]="getImageLink()"></app-parallax>
+
 <app-forms [fields]="getFieldsObject()" [stackFieldsHorizontally]="true" (formsData)=setFormData($event)></app-forms>
 
 <app-footer> </app-footer>

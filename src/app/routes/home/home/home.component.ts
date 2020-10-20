@@ -9,9 +9,10 @@ import { textObjInterface } from "../../../data-store/cardComponentInterface";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
-  ngOnInit(){ }
+  ngOnInit() { }
   bannerObj: textObjInterface = {
     headerText: "Fantastic Windows & Doors Fenestration",
     bodyText: "It specializes in design, manufacture, installation and service of precision-engineered, 100% customized UPVC and System Aluminium Windows and Doors",
@@ -20,5 +21,8 @@ export class HomeComponent implements OnInit {
   };
   getReviewContent(index) {
     return REVIEW_CONTENT[index];
+  }
+  getImageLink() {
+    return 'https://fantastic-windows.netlify.app/assets/images/banner1.png';
   }
 }

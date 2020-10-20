@@ -1,9 +1,7 @@
 <app-header> </app-header>
-<section class="banner contact-banner">
-    <div class="feature-heading">
-        <h3 class="contact-heading text-center mb-4">Contact Us</h3>
-    </div>
-</section>
+<app-banner [bannerObj]="bannerObj"> </app-banner>
+<app-parallax [imageLink]="getImageLink()"></app-parallax>
+
 <section class="contact">
     <div class="container">
         <h3 class="contact-heading text-center mb-5 mt-5">Get In Touch</h3>

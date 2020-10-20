@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ParallaxComponent } from './parallax/parallax.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
+  exports: [ParallaxComponent],
   declarations: [ParallaxComponent]
 })
 export class ParallaxModule { }
