@@ -8,5 +8,5 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CustomerReviewsComponent implements OnInit {
   @Input() reviewContent
   constructor() { }
-  ngOnInit() {}
+  ngOnInit() { }
 }
