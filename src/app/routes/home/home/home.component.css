@@ -152,7 +152,7 @@
   }
 }
 /* upvc */
-.upvc{
+/*.upvc{
   text-align: center;
   padding-top: 30rem;
   padding-bottom: 15rem;
@@ -172,7 +172,7 @@
 	color: #fff;
 	margin-top: 2em;
 }
-/*#menu {
+/#menu {
   width: 150px;
   height: 150px;
   position: absolute;

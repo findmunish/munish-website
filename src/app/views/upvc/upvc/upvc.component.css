@@ -1,4 +1,23 @@
-
+.upvc{
+  text-align: center;
+  padding-top: 30rem;
+  padding-bottom: 15rem;
+}
+.teal{
+  background-color: rgb(0, 150, 136) !important;
+  color: white
+}
+.contact-right .contact-btn {
+	outline: none;
+	padding: 15px 0;
+	background: #20c997;
+	width: 100%;
+	border: none;
+	letter-spacing: 2px;
+	font-weight: 600;
+	color: #fff;
+	margin-top: 2em;
+}
 #menu {
   width: 150px;
   height: 150px;
