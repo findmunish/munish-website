@@ -1,7 +1,7 @@
-<section class="banner">
-
+<!-- <section [ngClass]="{'banner': bannerObj.dispType === 'banner', 'parallax': bannerObj.dispType === 'parallax' }" [style.background-image]='getImage()'></section> -->
+<section class={{bannerObj.dispType}} [style.background-image]='getImage()'>
     <div class="feature-heading">
-        <h3 class="contact-heading text-center mb-4">{{bannerObj.headerText}}</h3>
-        <p style="white-space: pre-line" class="text-center">{{bannerObj.bodyText}}</p>
+        <h3 class="contact-heading text-center mb-4">{{bannerObj.textObj.headerText}}</h3>
+        <p style="white-space: pre-line" class="text-center">{{bannerObj.textObj.bodyText}}</p>
     </div>
 </section>

@@ -19,3 +19,10 @@
 	font-weight: 600;
 	letter-spacing: 2px;
 }
+/* parallax */
+.parallax {
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+}
+/* parallax ends */

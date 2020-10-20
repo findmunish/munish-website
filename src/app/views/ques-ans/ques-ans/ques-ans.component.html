@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header text-center" id={{getQuestionId()}}>
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" [attr.data-target]="getDataTargetId()"
+                aria-expanded="true" aria-controls="getCollapseId()">
+                {{quesAnsList.headerText}}
+            </button>
+        </h5>
+    </div>
+    <div id={{getCollapseId()}} class="collapse" aria-labelledby="getQuestionId()"
+        data-parent="#accordion">
+        <div class="card-body">
+            {{quesAnsList.bodyText}}
+        </div>
+    </div>
+</div>
