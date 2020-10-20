@@ -5,7 +5,7 @@
         </ol>
         <div class="carousel-inner">
             <div *ngFor="let carouselItem of carouselItems; let i=index;" class="carousel-item" [class.active]="i===0">
-                <img src={{carouselItem.imageObj.imageUrl}} class="d-block w-100" alt={{carouselItem.title.text}} >
+                <img src={{carouselItem.imageObj.imageUrl}} class="d-block w-100" alt={{carouselItem.imageObj.altText}} >
                 <div class="carousel-caption d-none d-md-block">
                     <h5 [ngStyle]="{'color': carouselItem.title.fontColor}">{{carouselItem.title.text}}</h5>
                     <p [ngStyle]="{'color': carouselItem.desc.fontColor}">{{carouselItem.desc.text}}</p>
