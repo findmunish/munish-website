@@ -2,7 +2,8 @@ import { cardInterface } from "../../data-store/cardComponentInterface";
 export const CAROUSEL_DATA: cardInterface[] = [
     {
         imageObj: {
-            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/Aluminium-Windows-1000x658.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/Aluminium-Windows-1000x658.jpg",
+            altText: "Aluminium Windows Image"
         },
         title: {
             headerText: "Aluminium Windows",
@@ -19,7 +20,8 @@ export const CAROUSEL_DATA: cardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/service-41.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/service-41.jpg",
+            altText: "UPVC Windows Image"
         },
         title: {
             headerText: "UPVC Windows",
@@ -36,10 +38,11 @@ export const CAROUSEL_DATA: cardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/window-services-1000x658.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/window-services-1000x658.jpg",
+            altText: "Window Image"
         },
         title: {
-            headerText: "Windows Services",
+            headerText: "Window Services",
             bodyText: "",
             fontColor: "black",
             fontSize: ""
@@ -53,10 +56,11 @@ export const CAROUSEL_DATA: cardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/door-services-1000x658.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/door-services-1000x658.jpg",
+            altText: "Door Image"
         },
         title: {
-            headerText: "Doors Services",
+            headerText: "Door Services",
             bodyText: "",
             fontColor: "black",
             fontSize: ""
@@ -70,7 +74,8 @@ export const CAROUSEL_DATA: cardInterface[] = [
     },
     {
         imageObj: {
-            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/Planning-and-projects-1000x658.jpg"
+            imageUrl: "https://fantastic-windows.netlify.app/assets/images/carousel/Planning-and-projects-1000x658.jpg",
+            altText: "Planning & Projects Image"
         },
         title: {
             headerText: "Planning & Projects",
