@@ -1,38 +1,36 @@
-<!--<div *ngIf="isHorizontalTransition">-->
-<div class="col-lg-3 col-md-6">
-  <div class="main">
-    <div [ngClass]="(isHorizontalTransition===true)?'card-my3':'card-my2'">
-      <div [class.large]="isHorizontalTransition===true">
-        <div [ngClass]="(isHorizontalTransition===true)?'active-div2':'active-div'">
-          <div class="owl">
-            <img [ngClass]="(isHorizontalTransition===true)?'img2':'img3'" src={{cardImageObj.imageObj.imageUrl}} alt={{cardImageObj.imageObj.altText}}>
+<div *ngIf="isHorizontalTransition">
+  <div class="col-lg-3 col-md-6">
+    <div class="main">
+      <div [ngClass]="(isHorizontalTransition===true)?'card-my3':'card-my2'">
+        <div [class.large]="isHorizontalTransition===true">
+          <div [ngClass]="(isHorizontalTransition===true)?'active-div2':'active-div'">
+            <div class="owl">
+              <img [ngClass]="(isHorizontalTransition===true)?'img2':'img3'" src={{cardImageObj.imageObj.imageUrl}} alt={{cardImageObj.imageObj.altText}}>
+            </div>
+            <strong [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-3'">{{cardImageObj.title.headerText}}</strong>
           </div>
-          <strong [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-3'">{{cardImageObj.title.headerText}}</strong>
-        </div>
-        <div [ngClass]="(isHorizontalTransition===true)?'hover-div2':'hover-div'">
-          <h3 [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-4'" >{{cardImageObj.desc.headerText}}</h3>
-          <p [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-2'" >{{cardImageObj.desc.bodyText}}</p>
+          <div [ngClass]="(isHorizontalTransition===true)?'hover-div2':'hover-div'">
+            <h3 [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-4'" >{{cardImageObj.desc.headerText}}</h3>
+            <p [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-2'" >{{cardImageObj.desc.bodyText}}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!--</div>-->
-<!--<div *ngIf="isVerticalTransition">
+<div *ngIf="!isHorizontalTransition">
 	<div class="col-lg-3 col-md-6">
-    <div class="main">
-      <div class="card-my2">	
-        <div class="active-div">
-          <div class="owl">
-            <img class="img3" src={{cardImageObj.imageObj.imageUrl}} alt={{cardImageObj.imageObj.altText}}>
-          </div>
-          <strong class="mt-3">{{cardImageObj.title.headerText}}</strong>
-        </div>
-        <div class="hover-div">
-          <h3 class="mt-4">{{cardImageObj.desc.headerText}}</h3>
-          <p class="mt-2" >{{cardImageObj.desc.bodyText}}</p>
-        </div>
-      </div>
-    </div>
+		<div class="card-my2">	
+			<div class="active-div">
+				<div class="owl">
+					<img class="img3" src={{cardImageObj.imageObj.imageUrl}} alt={{cardImageObj.imageObj.altText}}>
+				</div>
+				<strong class="mt-3">{{cardImageObj.title.headerText}}</strong>
+			</div>
+			<div class="hover-div">
+				<h3 class="mt-4">{{cardImageObj.desc.headerText}}</h3>
+				<p class="mt-2" >{{cardImageObj.desc.bodyText}}</p>
+			</div>
+		</div>
 	</div>
-</div>-->
+</div>
