@@ -1,5 +1,5 @@
 <!--<div *ngIf="isHorizontalTransition">-->
-<div class="col-md-6 col-lg-3">
+<div class="col-lg-3 col-md-6">
   <div class="main">
     <div [ngClass]="(isHorizontalTransition===true)?'card-my3':'card-my2'">
       <div class="large">
@@ -7,11 +7,11 @@
           <div class="owl">
             <img [ngClass]="(isHorizontalTransition===true)?'img2':'img3'" src={{cardImageObj.imageObj.imageUrl}} alt={{cardImageObj.imageObj.altText}}>
           </div>
-          <strong class="mt-5">{{cardImageObj.title.headerText}}</strong>
+          <strong [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-3'">{{cardImageObj.title.headerText}}</strong>
         </div>
         <div [ngClass]="(isHorizontalTransition===true)?'hover-div2':'hover-div'">
-          <h3 class="mt-5">{{cardImageObj.desc.headerText}}</h3>
-          <p class="mt-5">{{cardImageObj.desc.bodyText}}</p>
+          <h3 [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-4'" >{{cardImageObj.desc.headerText}}</h3>
+          <p [ngClass]="(isHorizontalTransition===true)?'mt-5':'mt-2'" >{{cardImageObj.desc.bodyText}}</p>
         </div>
       </div>
     </div>
