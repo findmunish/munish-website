@@ -8,12 +8,12 @@
 .contact-banner{
   background-image: url("https://fantastic-windows.netlify.app/assets/images/banner3.jpg");
 }
-.parallex{
+/.parallex{
   background-image: url('https://fantastic-windows.netlify.app/assets/images/banner1.png');
   background-size: cover;
   background-attachment: fixed;
   height: 400px;
-}
+}*/
 /* client feedback */
 .client h2{
   font-size: 40px;

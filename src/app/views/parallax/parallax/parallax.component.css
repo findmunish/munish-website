@@ -1,0 +1,8 @@
+/* parrallax */
+.parallex{
+  /*background-image: url(/assets/images/banner1.png); */
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+}
+/* parrallax ends */
